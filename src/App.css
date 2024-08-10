@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+/* General container styles */
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Top button positioning */
+.topButton {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Move the button to the left */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Main app container */
+.appContainer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Main button styles */
+.mainButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.mainButton:hover {
+    background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Form styles */
+.formContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Back button specific styles */
+.backButton {
+    background-color: #6c757d;
+}
+
+.backButton:hover {
+    background-color: #5a6268;
+}
+
+/* Home page button styles */
+.homeButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+    background-color: #0056b3;
+}
+
+.homeButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Table styles */
+.tableContainer {
+    width: 100%;
+    margin-top: 50px; /* Adjust margin as needed */
+}
+
+.bookTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bookTable th, .bookTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.bookTable th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.bookTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.bookTable tr:hover {
+    background-color: #ddd;
+}
+
+.bookTable img {
+    max-width: 100px;
+    height: auto;
+}
+
+.imageErrorMessage {
+    color: red;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Home logo styles */
+.homeLogo {
+    cursor: pointer;
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Layout styles for various components */
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between buttons */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Message styles */
+.message {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.message.success {
+    color: green;
+}
+
+.message.error {
+    color: red;
 }
