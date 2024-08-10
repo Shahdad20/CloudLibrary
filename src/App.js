@@ -68,6 +68,7 @@ const App = () => {
             case "home":
                 return (
                     <div className="appContainer">
+                        <h1 className="welcomeHeading">BookCloud, a New Approach to Organize a Library</h1>
                         <button className="homeButton" onClick={() => setView("login")}>Sign In</button>
                         <button className="homeButton" onClick={handleGuest}>Continue as Guest</button>
                     </div>
