@@ -67,7 +67,7 @@ const App = () => {
         switch (view) {
             case "home":
                 return (
-                    <div className="appContainer">
+                    <div className="homeContainer">
                         <h1 className="welcomeHeading">BookCloud, a New Approach to Organize a Library</h1>
                         <button className="homeButton" onClick={() => setView("login")}>Sign In</button>
                         <button className="homeButton" onClick={handleGuest}>Continue as Guest</button>
@@ -138,7 +138,11 @@ const App = () => {
         }
     };
 
-    return <div className="appContainer">{renderContent()}</div>;
+    return (
+        <div className={`appContainer ${view === "home" ? "homePage" : ""}`}>
+            {renderContent()}
+        </div>
+    );
 };
 
 export default App;

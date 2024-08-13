@@ -55,7 +55,10 @@ const SearchBooks = ({ goBack }) => {
       } else {
         setError("");
         const resultsWindow = window.open("", "_blank");
-        resultsWindow.document.write("<html><head><title>Search Results</title></head><body>");
+        resultsWindow.document.write("<html><head>");
+        resultsWindow.document.write("<title>Search Results</title>");
+        resultsWindow.document.write('<link rel="icon" href="/favicon.png" />'); // Add favicon link here
+        resultsWindow.document.write("</head><body>");
         resultsWindow.document.write("<h1>Search Results</h1>");
         filteredResults.forEach(result => {
           resultsWindow.document.write(`<div style="margin-bottom: 20px; margin-top: 20px;">

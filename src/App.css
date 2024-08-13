@@ -3,20 +3,74 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    min-height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
     padding: 20px;
 }
 
-/* Top button positioning */
+/* Home logo styles */
+.homeLogo {
+    cursor: pointer;
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    position: fixed; /* Fix the logo at the top */
+    top: 20px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+    z-index: 1000; /* Ensure it stays above the table */
+}
+
+/* Table container with scrolling */
+.tableContainer {
+    width: 100%;
+    margin-top: 80px; /* Space for the fixed logo */
+    overflow-y: auto;
+    max-height: calc(100vh - 100px); /* Adjust to fit the table within the page, considering margins */
+}
+
+/* Table styles */
+.bookTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bookTable th, .bookTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.bookTable th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.bookTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.bookTable tr:hover {
+    background-color: #ddd;
+}
+
+.bookTable img {
+    max-width: 100px;
+    height: auto;
+}
+
+.imageErrorMessage {
+    color: red;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Other styles (unchanged) */
 .topButton {
     position: absolute;
     top: 10px;
-    left: 10px; /* Move the button to the left */
+    left: 10px;
 }
 
-/* Main app container */
 .appContainer {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -26,7 +80,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+}
+
+/* Home page specific styles */
+.homePage {
+    background-image: url('/public/8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 93vh;
+    width: 95vw;
 }
 
 /* Main button styles */
@@ -101,7 +165,6 @@
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
-/* Back button specific styles */
 .backButton {
     background-color: #6c757d;
 }
@@ -110,7 +173,6 @@
     background-color: #5a6268;
 }
 
-/* Home page button styles */
 .homeButton {
     display: block;
     margin: 10px auto;
@@ -134,55 +196,6 @@
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
-/* Table styles */
-.tableContainer {
-    width: 100%;
-    margin-top: 50px; /* Adjust margin as needed */
-}
-
-.bookTable {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.bookTable th, .bookTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-.bookTable th {
-    background-color: #f4f4f4;
-    text-align: left;
-}
-
-.bookTable tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.bookTable tr:hover {
-    background-color: #ddd;
-}
-
-.bookTable img {
-    max-width: 100px;
-    height: auto;
-}
-
-.imageErrorMessage {
-    color: red;
-    font-style: italic;
-    margin: 0;
-}
-
-/* Home logo styles */
-.homeLogo {
-    cursor: pointer;
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 20px; /* Space below the logo */
-}
-
-/* Layout styles for various components */
 .homeContainer {
     display: flex;
     flex-direction: column;
@@ -195,12 +208,11 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between buttons */
+    gap: 20px;
     align-items: center;
     justify-content: center;
 }
 
-/* Message styles */
 .message {
     margin-top: 10px;
     font-size: 16px;
@@ -213,9 +225,10 @@
 .message.error {
     color: red;
 }
+
 .welcomeHeading {
-    text-align:center;
-    font-size: 2em; /* Adjust the size as needed */
+    text-align: center;
+    font-size: 2em;
     margin-top: -280px;
     margin-bottom: 120px;
 }
